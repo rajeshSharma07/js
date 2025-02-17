@@ -29,18 +29,39 @@ const obj3 ={...obj1, ...obj2}
 console.log(obj3);
 
 
-const users =[
-    {
-        id: 1,
-        email: "rajesh@gmail.com"
-    }
+// const users =[
+//     {
+//         id: 1,
+//         email: "rajesh@gmail.com"
+//     }
    
-]
-users[1].email
-console.log(tinderUser);
+// ]
+// users[1].email
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));
+// console.log(Object.keys(tinderUser));
 //console.log(Object.valuses(tinderUser));
 //console.log(Object.entries(tinderUser));
 
 //console.log(tinderUser.hasOwnproperty('isLogged'));
+
+
+//******************************//
+
+const course = {
+     coursename:"js in hindi",
+     price:"999",
+     courseInstructor: "Rajesh"
+}
+
+const {courseInstructor} = course
+console.log(courseInstructor);
+
+
+////////////////API json formate//////////
+
+//{
+    // "name" : "Rajesh",
+    // "coursename": "js in hindi",
+    // "price" : "free"
+//}
