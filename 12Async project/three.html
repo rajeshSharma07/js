@@ -7,17 +7,26 @@
 </head>
 <body>
     <h1>Hi JavaScript</h1>
-    <button id="start">Start</button>
-    <button id="stop">Stop</button>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
 </body>
 <script>
-    const saydate=function(str){
-        console.log(str,Date.now());
+    let intervalId;
+
+    const saydate=function(){
+        console.log("Rajesh Sharma", new Date().toLocaleString("en-IN"));
     }
-    const intervalId=setInterval(saydate,1000, "hi chinki")
 
-    clearInterval(intervalId)
+    document.getElementById('start').addEventListener('click',function(){
+        if(!intervalId){
+             intervalId=setInterval(saydate,1000);
+        }
+    });
 
-
+    document.getElementById('stop').addEventListener('click',function(){
+        clearInterval(intervalId);
+        intervalId=null;
+    });
+   
 </script>
 </html>
